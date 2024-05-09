@@ -1,6 +1,7 @@
 # FTIP
 A method for global protein surface comparison called FTIP, Furthest point sampling (FPS)-enhanced Triangulation-based Iterative closest point (ICP) for Protein surface comparison (PSC), which is applied to classifying proteins using only their surface shape information.
 This package provides an implementation of the inference pipeline of FTIP.
+![Picture1](https://github.com/lunarrecluse/FTIP/assets/9223804/50babc33-645f-4b9b-a9a2-bbb6d66f584d)
 
 Please refer to the FTIP paper (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7214043/) for a detailed method description.
 1. Data Preparation
