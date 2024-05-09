@@ -1,0 +1,37 @@
+../../../
+result.txt
+30
+100
+50
+
+This config file should be kept in the same directory as the protein_registration executable.
+
+The program currently will only read the first 5 lines of the config file.
+Please make sure there is no leading and ending spaces, etc in the first 5 lines.
+An example of the first five lines is given below:
+
+
+/home/yuan/work/2.protein-domain-surface/15.EM/distance/2.max
+result.txt
+10
+100
+50
+
+The first line is the directory where the protein data are.
+    If the "protein_names.txt" file exists in that directory, the program will compare all proteins in the file.
+    Otherwise, the program will automatically scan all .pdb/.asa files in the directory, and build a protein_names.txt file containing all the scanned files.
+    It is ok to modify the lines of the protein_names.txt without keeping the first column of the file (the index) continuous.
+    For example, one can delete some lines in the file so that those will not be included in the calculation.
+    Try to use absolute path in this line. Relative paths have not been tested.
+    To retrieve the absolute path of a folder, use command 'cd' to go to that folder, then use command 'pwd' (Print Working Directory) to retrieve its absolute path.
+
+The second line is the name of the file that output will be written to. ( Output will be at the directory of the first line.)
+    The output is a matrix whose (i,j)th element is the distance between the ith and jth proteins.
+    The result will be given in a upper-triangular matrix, which means the bottom-left half is always 0.
+    The ith protein's name can be referenced from the ith line in the protein_names.txt.
+
+The third line is the number of 3D points in the protein data.
+    I will try to get this number from the data itself in later versions, but make sure it is modified when you use protein data with different representative points.
+
+The fourth line is the dSSD cutoff value. 100 is a typical one.
+The fifth line is the SSD cufoff value. 50 is a typical one.
